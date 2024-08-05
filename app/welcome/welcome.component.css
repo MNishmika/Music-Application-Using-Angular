@@ -1,0 +1,183 @@
+/* styles.css */
+.container {
+    display: flex;
+    background-image: linear-gradient(150deg,  rgb(170, 209, 243), #E8DAEF,#acdcdc );
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-image: linear-gradient(150deg, #E8DAEF 30%,#E5E8E8 );
+    padding: 20px;
+  }
+  
+  .sidebar button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  .main-content {
+    width: 70%;
+    padding: 90px;
+  }
+  
+  .playlist {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .song-box {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .song-box img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .song-box p {
+    margin-top: 10px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+
+
+  header {
+    
+    background-image: linear-gradient(150deg,  rgb(170, 209, 243), #E8DAEF,#94dfdf );
+      padding: 5px;
+      text-align: center;
+      font-size: 150% ;
+    }
+
+    nav {
+
+      background-color: #333;
+     text-align: center;
+     
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 px;
+      font-size: 145%;
+      
+    }
+
+    a{color: #333;
+      font-family: cursive;
+      font-weight: 400;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 145%;
+      display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+    }
+    p,h2{
+      font-family: cursive;
+    }
+.song-box{
+  border: 3px solid pink;
+      box-shadow: 9px 6px 4px #ceb0da;
+}
+
+/* Add this CSS to your styles.css or component-specific CSS file */
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.audio-player img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.song-details {
+  flex-grow: 1;
+}
+
+.song-details h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.song-details p {
+  margin-bottom: 5px;
+}
+
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(135, 201, 219);
+}
+
+h3{
+  font-family: Freestyle Script;
+}
+#quotes{
+font-family: Monotype Corsiva;
+color:#E5E8E8;
+font-size: 25px;
+}
+#back{
+  text-align: right;
+}
+
+#sname,#aname{
+font-family: 'Times New Roman', Times, serif;
+font-style: bold;
+}
+
+.song-box img {
+  width: 100%; /* Set the width to 100% */
+  height: 70%; /* Maintain aspect ratio */
+  border-radius: 5px;
+}
+#q1{
+  font-family: Freestyle Script;
+  font-size: 60px;;
+}
+#q2{
+  font-family:Algerian;
+    font-size: 40px;
+
+}
+strong{
+    text-align: left;
+}

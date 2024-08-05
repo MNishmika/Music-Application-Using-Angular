@@ -1,0 +1,28 @@
+
+      
+        <div class="video-container">
+        <video autoplay muted loop id="video-bg">
+            <source [src]=imageUrl type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+        <div class="overlay">
+            
+            <div class="topnav">
+                
+                <div class="left">
+                    <a class="active" href="#home">Home</a>
+                    <a routerLink="/login" class="active">Login</a>
+                    <a routerLink="/delete" class="active">Delete</a>                   
+                    <a href="/view" class="active">View</a>
+                    <a href="#" class="active">About</a>
+                </div>  
+            </div>  
+        </div>
+        <div class="content">
+            <h1 class="name">Music <span>PlayList</span></h1>
+            <h1 class="motto">Begin and End Your Day with Music</h1>
+                <button class="ex-btn" (click)="navigateToOtherPage()" >Explore</button>
+        </div>
+       
+   

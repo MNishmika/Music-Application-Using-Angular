@@ -1,0 +1,59 @@
+
+
+
+<strong style="font-size: 30px;">Hii {{user}}</strong>
+<header>
+  <h1>NKS MUSIC PLAYLIST</h1>
+  <h3>Your Gateway to Musical Bliss</h3>
+</header>
+<nav> 
+  <div id="quotes">Elevate Your Listening Experience<br>Music for Every Moment</div>
+</nav>
+
+<div class="container">
+  <div class="sidebar">
+    <p id ="q1"> Unleash the Power of Music!!!</p>
+    <p id ="q2"> (❁´◡`❁)<br><br>Discover Your Musical Journey</p>
+    <button (click)="toggleSongList()">Show Songs</button>
+    <div *ngIf="showSongList">
+      <h2>Songs</h2>
+      <ul>
+        <li *ngFor="let song of songs">
+          {{ song.title }} - {{ song.artist }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="playlist">
+      <button class="song-box" *ngFor="let song of songs" (click)="playSong(song)">
+        <img src="{{ song.albumArt }}" alt="Album Art">
+        <p><span id="sname">SONG : </span>{{ song.title }}</p>
+        <p><span id="aname">ARTIST:</span>{{ song.artist}}</p>
+        <button class="favorite-button" *ngIf="!isFavorite(song)" (click)="addToFavorites(song)">Add to Favorites</button>
+        <button class="favorite-button" *ngIf="isFavorite(song)" (click)="removeFromFavorites(song)">Remove from Favorites</button>
+      </button>
+    </div>
+    <div class="favorites">
+      <h2>Favorites</h2>
+      <ul>
+        <li *ngFor="let favorite of favorites">
+          {{ favorite.title }} - {{ favorite.artist }}
+        </li>
+      </ul>
+    </div>
+    <section id="mp1">
+      <div class="audio-player" *ngIf="currentSong">
+        <img [src]="currentSong.albumArt" alt="{{ currentSong.title }}">
+        <div class="song-details">
+          <h2>{{ currentSong.title }}</h2>
+          <p>{{ currentSong.artist }}</p>
+          <audio controls [src]="currentSong.url" (ended)="playNextSong()"></audio>
+          <button (click)="pauseSong()">Pause</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<button (click)="logout()">Logout</button>
+<span id='back'><a routerLink="/home" class="back-button">Back</a></span>
